@@ -20,6 +20,11 @@ function checkCashRegister(price, cash, cid) {
     let status = '';
 
     let cidSum = 0;
+    /*
+    *   This filter function in below will only return values > 0 from cash in drawer
+    *   and will put into new array named fiteredCid in reverse order 
+    *   which means "ONE HUNDRED" comes first if we have $100 notes in drawer
+    */
     let filteredCid = cid.filter(elem => elem[1] !== 0).reverse();
 
     filteredCid.forEach(elem => {
